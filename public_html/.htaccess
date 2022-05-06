@@ -1,0 +1,11 @@
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine On
+
+Redirect 301 /signage /stmarys
+
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
