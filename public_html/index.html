@@ -1,148 +1,806 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Elwin M</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elwin's Portfolio WIP</title>
     <link rel="stylesheet" href="index.css">
+
+    <script>
+        function openTab(evt, tabName, tableId) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                if (tabcontent[i].closest("table").getAttribute("id") === tableId) {
+                    tabcontent[i].style.display = "none";
+                }
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                if (tabcontent[i].closest("table").getAttribute("id") === tableId) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const navbarItems = document.querySelectorAll('.navbar-menu li a');
+
+            navbarItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const navbarToggler = document.querySelector('#navbar-toggler');
+                    if (navbarToggler.checked) {
+                        navbarToggler.checked = false;
+                    }
+                });
+            });
+        });
+
+        function scrollToSection(id) {
+            var targetElement = document.querySelector(id);
+            var elementPosition = targetElement.offsetTop;
+            var offsetPosition = elementPosition - 100;
+
+            if (window.innerWidth <= 600) {
+                offsetPosition = elementPosition - 54;
+            }
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </head>
 
 <body>
-    <div class="grid-container">
-        <div class="grid-item">
-            <h1>Elwin Moolakkattu</h1>
-        </div>
-        <div class="grid-item">
-            <h2>Where I've started and where I'm headed</h2>
-            <h3>lorem ipsum</h3>
+    <header>
+        <h1>Elwin Moolakkattu WIP</h1>
+        <nav class="navbar">
+            <input type="checkbox" id="navbar-toggler" class="navbar-toggler" style="display:none">
+            <label for="navbar-toggler" class="navbar-toggler-icon"></label>
+            <ul class="navbar-menu">
+                <li><a onclick="scrollToSection('#about')">About</a></li>
+                <li><a onclick="scrollToSection('#skills')">Skills</a></li>
+                <li><a onclick="scrollToSection('#tools')">Tools</a></li>
+                <li><a onclick="scrollToSection('#experience')">Experience</a></li>
+                <li><a onclick="scrollToSection('#education')">Education</a></li>
+                <li><a onclick="scrollToSection('#projects')">Projects</a></li>
+                <li><a onclick="scrollToSection('#contact')">Contact</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <!--            
+            <p>
+            Welcome to my portfolio! My name is Elwin Moolakkattu andsfdsd I am a Systems Enasdsagineer with a strong background in
+            technical sales. I have a B.A. in Information Technology from York University and a minor in Business
+            Administration.
+
+            I understand customer requirements, environments, and challenges, and use this knowledge to design and propose
+            security solutions and implementation requirements. I also stay up to date on industry trends and changes in the
+            security landscape, and am able to lead conversations on these topics.
+
+            In addition to my technical skills, I have strong troubleshooting and problem-solving abilities, and am able to
+            analyze difficult problems in complex environments using a systematic approach. I also have excellent
+            communication and presentation skills, and am able to deliver training and education sessions to channel
+            partners and distributors.
+
+            In my previous roles, I have gained experience with a variety of programming languages including PHP, Python,
+            Java, HTML, CSS, and JavaScript. I have also worked with databases such as MySQL, Oracle DBMS, and MS Access. I
+            have a strong understanding of networking technologies, API-based security and compliance standards, and have
+            some experience with AWS.
+
+            Thank you for visiting my portfolio. Please feel free to contact me for any further information or to discuss
+            potential opportunities.
             <br>
+            As a highly experienced and skilled IT professional with a background in software engineering, systems
+            administration, and customer service, I am excited to present my portfolio and showcase the skills and
+            experience I have to offer. With over 3 years of experience in enterprise software engineering and technical
+            support, I have a strong understanding of Linux systems administration and experience with web server
+            administration (Apache Tomcat) and database management (MySQL). I am also experienced in scripting (Bash/PHP)
+            and automation tools, and have a strong knowledge of OS hardening, system security, and auditing, as well as
+            experience with high availability configuration and disaster recovery testing.
+
+            I am also well-versed in Linux networking and Ubuntu, and have experience with Nginx, Apache, PHP, MySQL, and
+            other technologies. I possess excellent verbal communication skills, problem-solving abilities, attention to
+            detail, and exceptional time management and organizational skills. I am passionate about growth,
+            entrepreneurial, and comfortable in a fast-paced environment.
+
+            In addition, I have strong coding skills in Python and experience in SciPy packages such as Numpy and Pandas. I
+            am experienced in building data processing tools and analyzing and organizing raw data, and have solid knowledge
+            in programming fundamentals, mathematics, and statistics. I also have strong web scraping skills, with
+            experience using Jupyter Notebook and MATLAB.
+
+            My past roles include working as a Full-Stack Developer and Maintainer at a church, where I was responsible for
+            spinning up and configuring the web server on a Raspberry Pi, creating a kiosk styled website and its admin
+            panel from scratch all in less than 4 weeks. I also have experience as a Customer Experience Representative
+            where my duties involve finding, recommending, and informing solutions to clients based on their requirements.
+
+            I have a B.A. in Information Technology from York University, where I specialized in systems administration,
+            systems analysis and design, network administration and design, client-server systems, requirements management,
+            database management systems, web mining, and applied artificial intelligence. I also have a minor in Business
+            Administration from York University.
+
+            I look forward to the opportunity to bring my skills and experience to your organization and make valuable
+            contributions to your team. Thank you for considering my poro.
+            </p>
+            -->
+            <p>
+                I'm a dedicated IT professional with a passion for developing cutting-edge technologies that make a real difference in people's lives. With years of experience in the field, I've honed my skills in software development, systems analysis, and project management, among other areas.
+            </p>
+            <p>
+                One of my primary ambitions is to help drive the development of AI and other advanced technologies that can revolutionize industries and improve people's quality of life. I believe that AI has the potential to transform everything from healthcare to transportation to education, and I'm excited to be a part of this rapidly evolving field.
+            </p>
+            <p>
+                In addition to my technical expertise, I'm also committed to staying up-to-date with the latest research and best practices in the industry. I'm constantly learning and growing, whether that means attending conferences, networking with peers, or exploring new technologies on my own time.
+            </p>
+            <p>
+                Ultimately, my goal is to use my skills and experience to create better, more effective technologies that can benefit people around the world. Whether I'm working on a complex software project or collaborating with colleagues on an AI research initiative, I'm always striving to make a positive impact and push the boundaries of what's possible.
+            </p>
+        </section>
+
+        <br>
+        <section id="skills">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Skills</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="skills">
+                            <table>
+                                <tr>
+                                    <th>Data Analysis</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Business Intelligence</li>
+                                            <li>Data Collection</li>
+                                            <li>Data Visualization</li>
+                                            <li>Data Warehousing</li>
+                                            <li>Excel</li>
+                                            <li>Machine Learning</li>
+                                            <li>Matlab</li>
+                                            <li>Python</li>
+                                            <li>Statistical Analysis</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Database Management</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Database Design</li>
+                                            <li>Database Administration</li>
+                                            <li>Microsoft Access</li>
+                                            <li>MySQL</li>
+                                            <li>Oracle DBMS</li>
+                                            <li>phpMyAdmin</li>
+                                            <li>SQL</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Networking Skills</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>CDN Management</li>
+                                            <li>DHCP Management</li>
+                                            <li>DNS Management</li>
+                                            <li>Network Security</li>
+                                            <li>Reverse Proxy Management</li>
+                                            <li>Router And Switch Management</li>
+                                            <li>SSL Configuration And Renewal</li>
+                                            <li>Samba/ Network Shares</li>
+                                            <li>VPN Management</li>
+                                            <li>Virtual Hosts Management</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="skills">
+                            <table>
+                                <tr>
+                                    <th>Programming Languages</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Bash Scripting</li>
+                                            <li>C#</li>
+                                            <li>GO</li>
+                                            <li>HTML/CSS</li>
+                                            <li>Java</li>
+                                            <li>JavaScript</li>
+                                            <li>PHP</li>
+                                            <li>PowerShell Scripting</li>
+                                            <li>Python</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Project Management</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Agile Development</li>
+                                            <li>Project Planning</li>
+                                            <li>Project Management Methodologies</li>
+                                            <li>Risk Management</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Web Development</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Back-End Development</li>
+                                            <li>Front-End Development</li>
+                                            <li>Responsive Web Design</li>
+                                            <li>User Experience Design</li>
+                                            <li>User Interface Design</li>
+                                            <li>Web Application Development</li>
+                                            <li>Web Design</li>
+                                            <li>Web Development Frameworks</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="skills">
+                            <table class="tableHalf">
+                                <tr>
+                                    <th>Other Skills</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Ability To Adapt To New Technologies And Trends</li>
+                                            <li>Backup Management</li>
+                                            <li>CRON Management</li>
+                                            <li>Group Policy Management</li>
+                                            <li>JSON</li>
+                                            <li>Linux CLI</li>
+                                            <li>Linux Services Management</li>
+                                            <li>Regex</li>
+                                            <li>Remote Systems Management</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tableHalf">
+                                <tr>
+                                    <th>Other Skills</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+
+                                            <li>Strong Verbal And Written Communication Skills</li>
+                                            <li>Systems Designs And Architecture</li>
+                                            <li>Troubleshooting Skills</li>
+                                            <li>UML</li>
+                                            <li>Web Server Management</li>
+                                            <li>Webscraping</li>
+                                            <li>Windows PowerShell/CMD</li>
+                                            <li>XML</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <br>
+        <section id="tools">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Tools</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="skills">
+                            <table>
+                                <tr>
+                                    <th>IDEs</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Eclipse</li>
+                                            <li>JupyterLab</li>
+                                            <li>NetBeans</li>
+                                            <li>Visual Studio</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Office Software</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Google Workspace</li>
+                                            <li>Microsoft Office</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Operating Systems</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Android OS</li>
+                                            <li>Linux</li>
+                                            <li>MacOS</li>
+                                            <li>Windows</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Row 2 -->
+                <tr>
+                    <td>
+                        <div class="skills">
+                            <table>
+                                <tr>
+                                    <th>Version Control</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Git</li>
+                                            <li>GitHub</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Virtual Machines</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Docker</li>
+                                            <li>Oracle VirtualBox</li>
+                                            <li>Windows Sandbox</li>
+                                            <li>Windows Subsystem For Linux</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Other Tools</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Adobe Suite</li>
+                                            <li>Apache</li>
+                                            <li>Apache Tomcat</li>
+                                            <li>Autodesk Fusion 360</li>
+                                            <li>Blender</li>
+                                            <li>Nginx</li>
+                                            <li>OTRS Ticketing System</li>
+                                            <li>PuTTY</li>
+                                            <li>Unity</li>
+                                            <li>Wireshark</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <br>
+        <div id="tabs">
+            <section id="experience">
+                <table id="experienceTable">
+                    <tr class="tableHead">
+                        <td>
+                            <h2>Experience</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1Exp', 'experienceTable')">
+                                <span style="margin-bottom:7px;">St. Mary's Syriac Orthodox Church</span>
+                                Full-Stack Developer And Maintainer
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2Exp', 'experienceTable')">
+                                <span style="margin-bottom:7px;">Indigo Books And Music</span>
+                                Customer Experience Representative
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3Exp', 'experienceTable')">
+                                <span style="margin-bottom:7px;">McDonald's Corporation</span>
+                                Crew Trainer And Brower Staff
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="table1Exp" class="tab-content active">
+                                <table>
+                                    <tr>
+                                        <th style="border:none;">Time Active: <span style="font-weight:normal">01/2020 - PRESENT</span></th>
+                                        <th style="text-align:right;border:none;">Employment: <span style="font-weight:normal">Volunteer</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Responsibilities</th>
+                                        <th>Achievements</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Built a web server on a Raspberry Pi to host the website</li>
+                                                <li>Collaborated with church leaders to ensure the website met the needs of the congregation</li>
+                                                <li>Created an admin panel to manage and edit all content on the website, including image uploads, which has saved time and improved efficiency</li>
+                                                <li>Designed and implemented a homepage with carousels displaying birthdays, anniversaries, and contributions of church members</li>
+                                                <li>Developed and maintained a kiosk style website using a LAMP stack</li>
+                                                <li>Implemented a news section at the bottom of the homepage</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Achieved high user satisfaction with the website among church members</li>
+                                                <li>Built the entire website from scratch, showcasing strong coding skills and dedication to the project</li>
+                                                <li>Consistently delivered high-quality code for the website</li>
+                                                <li>Demonstrated proficiency in building and managing a web server on a Raspberry Pi</li>
+                                                <li>Developed effective solutions to improve website functionality and user experience</li>
+                                                <li>Maintained a strong understanding of web development trends and best practices</li>
+                                                <li>Optimized the website's performance, ensuring fast load times and a smooth user experience</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table2Exp" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th style="border:none;">Time Active: <span style="font-weight:normal"> 09/2020 - PRESENT</span></th>
+                                        <th style="text-align:right;border:none;">Employment: <span style="font-weight:normal">Part-Time</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Responsibilities</th>
+                                        <th>Achievements</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Assist customers in finding and purchasing merchandise</li>
+                                                <li>Communicate effectively with team members and managers</li>
+                                                <li>Maintain a clean and organized store environment</li>
+                                                <li>Maintain knowledge of store promotions and events</li>
+                                                <li>Process transactions accurately and efficiently using POS systems</li>
+                                                <li>Provide exceptional customer service to all patrons</li>
+                                                <li>Recommend and sell books, music, and other products to customers</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Achieved a high average of Plum Plus sales per quarter by consistently promoting the benefits of the program to customers and highlighting its value</li>
+                                                <li>Consistently met or exceeded sales goals and performance targets</li>
+                                                <li>Demonstrated exceptional teamwork skills by collaborating with coworkers to provide seamless customer experiences</li>
+                                                <li>Maintained a thorough knowledge of the store's inventory and effectively recommended products to customers</li>
+                                                <li>Received multiple customer commendations for outstanding service and recommendations</li>
+                                                <li>Successfully resolved customer complaints and issues, resulting in high customer satisfaction ratings</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table3Exp" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th style="border:none;">Time Active: <span style="font-weight:normal"> 12/2016 - 06/2019</span></th>
+                                        <th style="text-align:right;border:none;">Employment: <span style="font-weight:normal">Part-Time</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Responsibilities</th>
+                                        <th>Achievements</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Communicated effectively with customers and team members to ensure a positive dining experience</li>
+                                                <li>Maintained a clean and organized work environment, adhering to safety and sanitation guidelines</li>
+                                                <li>Managed delivery orders and maintained timely delivery schedules</li>
+                                                <li>Operated cash registers and processed customer orders with accuracy and efficiency</li>
+                                                <li>Performed maintenance and repairs on equipment and machines as needed</li>
+                                                <li>Prepared food items according to company standards and recipes</li>
+                                                <li>Trained new employees on company policies, procedures, and safety standards</li>
+                                                <li>Worked efficiently and effectively in a fast-paced environment while maintaining a high level of customer service</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Consistently maintained high productivity and efficiency in all assigned tasks</li>
+                                                <li>Received multiple commendations from customers and management for outstanding customer service</li>
+                                                <li>Recognized as a top-performing crew member and selected for leadership training program</li>
+                                                <li>Successfully resolved equipment malfunctions, minimizing downtime and ensuring smooth operations</li>
+                                                <li>Successfully trained and mentored several new crew members, who went on to become high-performing employees</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <br>
+            <section id="education">
+                <table id="educationTable">
+                    <tr class="tableHead">
+                        <td>
+                            <h2>Education</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1Edu', 'educationTable')">
+                                <span style="margin-bottom:7px;">York University</span>
+                                Information Technology
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2Edu', 'educationTable')">
+                                <span style="margin-bottom:7px;">York University</span>
+                                Business Administration
+                            </button>
+                            <!--
+                        <button class="tab-btn" onclick="openTab(event, 'table3Edu', 'educationTable')">
+                            <span style="margin-bottom:7px;">St. Roch Catholic Secondary</span>
+                            Ontario Secondary School Diploma
+                        </button>
+                        -->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="table1Edu" class="tab-content active">
+                                <table>
+                                    <tr>
+                                        <th style="border:none;">Graduation Date: <span style="font-weight:normal">2021</span></th>
+                                        <th style="text-align:right;border:none;">Degree: <span style="font-weight:normal">B.A., Honours Major</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Exerience</th>
+                                        <th>Takeaways</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Acquired knowledge and skills in areas such as database design and management, web development, networking, and security</li>
+                                                <li>Acquired knowledge of web server management and troubleshooting</li>
+                                                <li>Developed a strong foundation in programming and software development principles and techniques</li>
+                                                <li>Developed an understanding of knowledge management principles and practices, including knowledge acquisition, storage, retrieval, and dissemination</li>
+                                                <li>Development of technical writing and presentation skills</li>
+                                                <li>Experience with version control tools like Git and GitHub</li>
+                                                <li>Experience with virtual machines and containerization using Docker and Oracle VirtualBox</li>
+                                                <li>Explored the impact of information technology on organizational behaviour, including the effects of IT on organizational culture, structure, and strategy</li>
+                                                <li>Gained experience working on group projects and collaborating with peers</li>
+                                                <li>Gained exposure to various project management and team collaboration tools</li>
+                                                <li>Gained knowledge and skills in the design and development of enterprise systems such as enterprise resource planning (ERP), supply chain management (SCM), customer relationship management (CRM), and business intelligence (BI)</li>
+                                                <li>Learned about project management principles and practices as applied to information technology projects, including project initiation, planning, execution, control, and closure</li>
+                                                <li>Learning about human-computer interaction principles and practices, including user interface design, usability testing, accessibility, and user experience (UX) design</li>
+                                                <li>Studied the principles and practices of information technology security, including threat analysis, risk management, access control, cryptography, security policies, and security audits</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Communication skills, both written and verbal, with the ability to effectively communicate technical information to both technical and non-technical audiences</li>
+                                                <li>Database design and management skills, with the ability to design and implement complex database systems</li>
+                                                <li>Enterprise systems design and development skills, with the ability to analyze business processes and design and implement enterprise systems to improve organizational efficiency and effectiveness</li>
+                                                <li>Experience working with various programming languages such as Java, Python, PHP, HTML/CSS</li>
+                                                <li>Human-computer interaction design and development skills, with the ability to design effective and efficient user interfaces and evaluate their usability and user experience</li>
+                                                <li>Knowledge management skills, with the ability to design and implement effective knowledge management systems</li>
+                                                <li>Knowledge of database management systems including Oracle DBMS, and Microsoft Access</li>
+                                                <li>Knowledge of various operating systems including Linux, Windows, and MacOS</li>
+                                                <li>Problem-solving and critical thinking skills, with the ability to analyze complex problems and develop effective solutions</li>
+                                                <li>Programming skills in languages such as Java, Python, and PHP</li>
+                                                <li>Project management skills, with the ability to manage projects from initiation to closure, and to effectively manage project teams</li>
+                                                <li>Skills in data analysis using tools such as Excel, MATLAB, and Python</li>
+                                                <li>Skills in using various software tools like the Microsoft Suite, and Wireshark</li>
+                                                <li>Understanding of systems design and architecture, as well as UML diagramming</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table2Edu" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th style="border:none;">Graduation Date: <span style="font-weight:normal">2021</span></th>
+                                        <th style="text-align:right;border:none;">Degree: <span style="font-weight:normal">B.A., Honours Minor</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Exerience</th>
+                                        <th>Takeaways</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Broad understanding of how businesses operate and how to manage different aspects of a business</li>
+                                                <li>Examining the fundamentals of management, including planning, organizing, leading, and controlling</li>
+                                                <li>Exploring various marketing concepts such as segmentation, targeting, positioning, branding, and promotion</li>
+                                                <li>Learning about the principles and practices of accounting, including financial statements, balance sheets, income statements, and cash flow statements</li>
+                                                <li>Studying the basics of finance, including the time value of money, financial analysis, and risk management</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Create and manage a budget, assess investment opportunities, and analyze financial risks</li>
+                                                <li>Designed and implemented effective marketing strategies that target specific customer segments</li>
+                                                <li>Management skills of people and resources to achieve organizational objectives</li>
+                                                <li>The ability to analyze financial statements and use financial ratios to evaluate a company's performance</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--
+                        <div id="table3Edu" class="tab-content">
+                            <table>
+                                <tr>
+                                    <th style="border:none;">Graduation Date: <span style="font-weight:normal">2016</span></th>
+                                    <th style="text-align:right;border:none;">Degree: <span style="font-weight:normal">High School Diploma</span></th>
+                                </tr>
+                                <tr>
+                                    <th>Exerience</th>
+                                    <th>Takeaways</th>
+                                </tr>
+                                <tr>
+                                    <td>Row 1, Column 1</td>
+                                    <td>Row 1, Column 2</td>
+                                </tr>
+                            </table>
+                        </div>
+                        -->
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <br>
+            <section id="projects">
+                <table id="projectsTable">
+                    <tr class="tableHead">
+                        <td>
+                            <h2>Projects</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1Proj', 'projectsTable')">raspi1</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2Proj', 'projectsTable')">raspi2</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3Proj', 'projectsTable')">raspi3</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="table1Proj" class="tab-content active">
+                                <table>
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table2Proj" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>ta 2</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table3Proj" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>3</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </div>
-    </div>
 
-    <div class="grid-item">
-        <h2>Education</h2>
-        <h3>York</h3>
-        <h4>IT</h4>
-        <h4>BUSINESS</h4>
         <br>
-    </div>
-    <br>
-
-    <div class="grid-item">
-        <h2>my experience</h2>
-    </div>
-
-    <div class="grid-item">
-        <h3>data science</h3>
-        <h4>python web scripting, ebay, matlab</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>AI</h3>
-        <h4>IBM, machine learning</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>system admin</h3>
-        <h4>docker</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>software consultant</h3>
-        <h4>uml diagrams, systems architecture</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>full stack developer</h3>
-        <h4>php website, sql, <a href="https://elwinm.ca/stmarys/">St Mary's!</a></h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>software developer</h3>
-        <h4>java programming</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>scripting</h3>
-        <h4>powershell scripting</h4>
-        <br>
-    </div>
-    <br>
-
-    <div class="grid-item">
-        <h3>communication</h3>
-        <h4>writing class</h4>
-        <br>
-    </div>
-    <br>
-
-    <div class="grid-item">
-        <h3>marketing analysis</h3>
-        <h4>tree thing</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>accounting</h3>
-        <h4>finance stuff</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>customer service/ hr</h3>
-        <h4>phsychology, consumer behaviour</h4>
-        <br>
-    </div>
-    <br>
-
-    <div class="grid-item">
-        <h3>programs</h3>
-        <h4>excel matlab</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>skills</h3>
-        <h4>cpr</h4>
-        <br>
-    </div>
-    <br>
-
-    <div class="grid-item">
-        <h2>job experience</h2>
-    </div>
-
-    <div class="grid-item">
-        <h3>chapters</h3>
-        <h4>lorem ipsum</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h3>mcdonalds</h3>
-        <h4>lorem ipsum</h4>
-        <br>
-    </div>
-
-    <div class="grid-item">
-        <h2>contact</h2>
-        <h3>email</h3>
-        <h3>linkedin</h3>
-    </div>
-
-
-
-
-
-
-
-
-
-    </div>
-</body>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="472428293326243307222b302e292a692426">[email&#160;protected]</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/elwinwm">Elwin M</a></p>
+            <p>Phone: +1 647-921-6841</p>
+            <p>Location: Ontario, Canada</p>
+            <p>GitHub: <a href="https://github.com/Project-Guardian">Elwin M</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>Elwin Moolakkattu 2023</p>
+    </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 
 </html>
