@@ -43,10 +43,18 @@
         function scrollToSection(id) {
             var targetElement = document.querySelector(id);
             var elementPosition = targetElement.offsetTop;
-            var offsetPosition = elementPosition - 100;
+            var offsetAmount;
+            var mobileOffsetAmount = 58;
+            if (id === "#about") {
+                offsetAmount = 100;
+            }
+            else {
+                offsetAmount = 77;
+            }
+            var offsetPosition = elementPosition - offsetAmount;
 
             if (window.innerWidth <= 600) {
-                offsetPosition = elementPosition - 58;
+                offsetPosition = elementPosition - mobileOffsetAmount;
             }
 
             window.scrollTo({
@@ -54,6 +62,7 @@
                 behavior: "smooth"
             });
         }
+
     </script>
 </head>
 
@@ -69,86 +78,100 @@
                 <li><a onclick="scrollToSection('#tools')">Tools</a></li>
                 <li><a onclick="scrollToSection('#experience')">Experience</a></li>
                 <li><a onclick="scrollToSection('#education')">Education</a></li>
-                <li><a onclick="scrollToSection('#projects')">Projects</a></li>
+                <li><a onclick="scrollToSection('#projects')">Projects+</a></li>
                 <li><a onclick="scrollToSection('#contact')">Contact</a></li>
 
             </ul>
         </nav>
-
     </header>
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <!--            
+            <!--
+    <p>
+    Welcome to my portfolio! My name is Elwin Moolakkattu andsfdsd I am a Systems Enasdsagineer with a strong background in
+    technical sales. I have a B.A. in Information Technology from York University and a minor in Business
+    Administration.
+
+    I understand customer requirements, environments, and challenges, and use this knowledge to design and propose
+    security solutions and implementation requirements. I also stay up to date on industry trends and changes in the
+    security landscape, and am able to lead conversations on these topics.
+
+    In addition to my technical skills, I have strong troubleshooting and problem-solving abilities, and am able to
+    analyze difficult problems in complex environments using a systematic approach. I also have excellent
+    communication and presentation skills, and am able to deliver training and education sessions to channel
+    partners and distributors.
+
+    In my previous roles, I have gained experience with a variety of programming languages including PHP, Python,
+    Java, HTML, CSS, and JavaScript. I have also worked with databases such as MySQL, Oracle DBMS, and MS Access. I
+    have a strong understanding of networking technologies, API-based security and compliance standards, and have
+    some experience with AWS.
+
+    Thank you for visiting my portfolio. Please feel free to contact me for any further information or to discuss
+    potential opportunities.
+    <br>
+    As a highly experienced and skilled IT professional with a background in software engineering, systems
+    administration, and customer service, I am excited to present my portfolio and showcase the skills and
+    experience I have to offer. With over 3 years of experience in enterprise software engineering and technical
+    support, I have a strong understanding of Linux systems administration and experience with web server
+    administration (Apache Tomcat) and database management (MySQL). I am also experienced in scripting (Bash/PHP)
+    and automation tools, and have a strong knowledge of OS hardening, system security, and auditing, as well as
+    experience with high availability configuration and disaster recovery testing.
+
+    I am also well-versed in Linux networking and Ubuntu, and have experience with Nginx, Apache, PHP, MySQL, and
+    other technologies. I possess excellent verbal communication skills, problem-solving abilities, attention to
+    detail, and exceptional time management and organizational skills. I am passionate about growth,
+    entrepreneurial, and comfortable in a fast-paced environment.
+
+    In addition, I have strong coding skills in Python and experience in SciPy packages such as Numpy and Pandas. I
+    am experienced in building data processing tools and analyzing and organizing raw data, and have solid knowledge
+    in programming fundamentals, mathematics, and statistics. I also have strong web scraping skills, with
+    experience using Jupyter Notebook and MATLAB.
+
+    My past roles include working as a Full-Stack Developer and Maintainer at a church, where I was responsible for
+    spinning up and configuring the web server on a Raspberry Pi, creating a kiosk styled website and its admin
+    panel from scratch all in less than 4 weeks. I also have experience as a Customer Experience Representative
+    where my duties involve finding, recommending, and informing solutions to clients based on their requirements.
+
+    I have a B.A. in Information Technology from York University, where I specialized in systems administration,
+    systems analysis and design, network administration and design, client-server systems, requirements management,
+    database management systems, web mining, and applied artificial intelligence. I also have a minor in Business
+    Administration from York University.
+
+    I look forward to the opportunity to bring my skills and experience to your organization and make valuable
+    contributions to your team. Thank you for considering my poro.
+    </p>
+    -->
+            <!--<p>
+        I'm a dedicated IT professional with a passion for developing cutting-edge technologies that make a real difference in people's lives. With years of experience in the field, I've honed my skills in software development, systems analysis, and project management, among other areas.
+    </p>
+    <p>
+        One of my primary ambitions is to help drive the development of AI and other advanced technologies that can revolutionize industries and improve people's quality of life. I believe that AI has the potential to transform everything from healthcare to transportation to education, and I'm excited to be a part of this rapidly evolving field.
+    </p>
+    <p>
+        In addition to my technical expertise, I'm also committed to staying up-to-date with the latest research and best practices in the industry. I'm constantly learning and growing, whether that means attending conferences, networking with peers, or exploring new technologies on my own time.
+    </p>
+    <p>
+        Ultimately, my goal is to use my skills and experience to create better, more effective technologies that can benefit people around the world. Whether I'm working on a complex software project or collaborating with colleagues on an AI research initiative, I'm always striving to make a positive impact and push the boundaries of what's possible.
+    </p>-->
             <p>
-            Welcome to my portfolio! My name is Elwin Moolakkattu andsfdsd I am a Systems Enasdsagineer with a strong background in
-            technical sales. I have a B.A. in Information Technology from York University and a minor in Business
-            Administration.
-
-            I understand customer requirements, environments, and challenges, and use this knowledge to design and propose
-            security solutions and implementation requirements. I also stay up to date on industry trends and changes in the
-            security landscape, and am able to lead conversations on these topics.
-
-            In addition to my technical skills, I have strong troubleshooting and problem-solving abilities, and am able to
-            analyze difficult problems in complex environments using a systematic approach. I also have excellent
-            communication and presentation skills, and am able to deliver training and education sessions to channel
-            partners and distributors.
-
-            In my previous roles, I have gained experience with a variety of programming languages including PHP, Python,
-            Java, HTML, CSS, and JavaScript. I have also worked with databases such as MySQL, Oracle DBMS, and MS Access. I
-            have a strong understanding of networking technologies, API-based security and compliance standards, and have
-            some experience with AWS.
-
-            Thank you for visiting my portfolio. Please feel free to contact me for any further information or to discuss
-            potential opportunities.
-            <br>
-            As a highly experienced and skilled IT professional with a background in software engineering, systems
-            administration, and customer service, I am excited to present my portfolio and showcase the skills and
-            experience I have to offer. With over 3 years of experience in enterprise software engineering and technical
-            support, I have a strong understanding of Linux systems administration and experience with web server
-            administration (Apache Tomcat) and database management (MySQL). I am also experienced in scripting (Bash/PHP)
-            and automation tools, and have a strong knowledge of OS hardening, system security, and auditing, as well as
-            experience with high availability configuration and disaster recovery testing.
-
-            I am also well-versed in Linux networking and Ubuntu, and have experience with Nginx, Apache, PHP, MySQL, and
-            other technologies. I possess excellent verbal communication skills, problem-solving abilities, attention to
-            detail, and exceptional time management and organizational skills. I am passionate about growth,
-            entrepreneurial, and comfortable in a fast-paced environment.
-
-            In addition, I have strong coding skills in Python and experience in SciPy packages such as Numpy and Pandas. I
-            am experienced in building data processing tools and analyzing and organizing raw data, and have solid knowledge
-            in programming fundamentals, mathematics, and statistics. I also have strong web scraping skills, with
-            experience using Jupyter Notebook and MATLAB.
-
-            My past roles include working as a Full-Stack Developer and Maintainer at a church, where I was responsible for
-            spinning up and configuring the web server on a Raspberry Pi, creating a kiosk styled website and its admin
-            panel from scratch all in less than 4 weeks. I also have experience as a Customer Experience Representative
-            where my duties involve finding, recommending, and informing solutions to clients based on their requirements.
-
-            I have a B.A. in Information Technology from York University, where I specialized in systems administration,
-            systems analysis and design, network administration and design, client-server systems, requirements management,
-            database management systems, web mining, and applied artificial intelligence. I also have a minor in Business
-            Administration from York University.
-
-            I look forward to the opportunity to bring my skills and experience to your organization and make valuable
-            contributions to your team. Thank you for considering my poro.
+                As a dedicated IT professional, I'm passionate about creating cutting-edge technologies that make a real difference in people's lives. With years of experience in software development, systems analysis, and project management, I've honed my skills and gained expertise in a variety of areas.
             </p>
-            -->
             <p>
-                I'm a dedicated IT professional with a passion for developing cutting-edge technologies that make a real difference in people's lives. With years of experience in the field, I've honed my skills in software development, systems analysis, and project management, among other areas.
+                One of my primary ambitions is to contribute to the development of AI and other advanced technologies that have the potential to revolutionize industries and improve people's quality of life. With a deep interest in the transformative power of AI, I'm excited to be part of this rapidly evolving field.
             </p>
             <p>
-                One of my primary ambitions is to help drive the development of AI and other advanced technologies that can revolutionize industries and improve people's quality of life. I believe that AI has the potential to transform everything from healthcare to transportation to education, and I'm excited to be a part of this rapidly evolving field.
+                In addition to my technical skills, I'm committed to staying up-to-date with the latest research and best practices in the industry. I actively seek out opportunities to learn and grow, whether that means attending conferences, networking with peers, or exploring new technologies on my own time.
             </p>
             <p>
-                In addition to my technical expertise, I'm also committed to staying up-to-date with the latest research and best practices in the industry. I'm constantly learning and growing, whether that means attending conferences, networking with peers, or exploring new technologies on my own time.
+                My ultimate goal is to leverage my expertise to create better, more effective technologies that can benefit people around the world. Whether working on complex software projects or collaborating with colleagues on AI research initiatives, I'm always focused on making a positive impact and pushing the boundaries of what's possible.
             </p>
             <p>
-                Ultimately, my goal is to use my skills and experience to create better, more effective technologies that can benefit people around the world. Whether I'm working on a complex software project or collaborating with colleagues on an AI research initiative, I'm always striving to make a positive impact and push the boundaries of what's possible.
+                Furthermore, I am an experienced software engineer with a passion for creating innovative solutions to complex problems. I have expertise in various programming languages, including Python, Java, and C#, and I am adept at working with both front-end and back-end technologies. My ability to collaborate with cross-functional teams and my strong communication skills have been key to the success of many of my projects. I am highly motivated and thrive in fast-paced environments, where I can continuously learn and grow. I am excited about the opportunity to bring my skills and experience to a new role and contribute to the success of a dynamic organization.
             </p>
         </section>
 
-        <br>
+        <br><span class="spacer"></span>
         <section id="skills">
             <table>
                 <tr>
@@ -226,7 +249,7 @@
                         <div class="skills">
                             <table>
                                 <tr>
-                                    <th>Programming Languages</th>
+                                    <th>Programming And Scripting</th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -349,7 +372,7 @@
             </table>
         </section>
 
-        <br>
+        <br><span class="spacer"></span>
         <section id="tools">
             <table>
                 <tr>
@@ -465,7 +488,7 @@
             </table>
         </section>
 
-        <br>
+        <br><span class="spacer"></span>
         <div id="tabs">
             <section id="experience">
                 <table id="experienceTable">
@@ -602,7 +625,7 @@
                 </table>
             </section>
 
-            <br>
+            <br><span class="spacer"></span>
             <section id="education">
                 <table id="educationTable">
                     <tr class="tableHead">
@@ -735,26 +758,30 @@
                 </table>
             </section>
 
-            <br>
+            <br><span class="spacer"></span>
             <section id="projects">
-                <table id="projectsTable">
+                <table id="personalProjectsTable">
                     <tr class="tableHead">
                         <td>
-                            <h2>Projects</h2>
+                            <h2>Personal Projects</h2>
                         </td>
                     </tr>
                     <tr>
                         <td class="tab-btn-container">
-                            <button class="tab-btn active" onclick="openTab(event, 'table1Proj', 'projectsTable')">raspi1</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table2Proj', 'projectsTable')">raspi2</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table3Proj', 'projectsTable')">raspi3</button>
+                            <button class="tab-btn active" onclick="openTab(event, 'table1PP', 'personalProjectsTable')">This Website/ Server</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2PP', 'personalProjectsTable')">St. Mary's</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3PP', 'personalProjectsTable')">Rick Roll</button>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <div id="table1Proj" class="tab-content active">
-                                <table>
+                            <div id="table1PP" class="tab-content active">
+                                <p>
+                                    This website and the server it's hosted on is an amalgamation of everything I've ever learned in regards to IT.<br />
+                                    It is completely built from scratch and every bit of it is hand coded by me. 
+                                </p>
+<!--                                <table>
                                     <tr>
                                         <th>Column 1</th>
                                         <th>Column 2</th>
@@ -767,9 +794,9 @@
                                         <td>Row 2, Column 1</td>
                                         <td>Row 2, Column 2</td>
                                     </tr>
-                                </table>
+                                </table>-->
                             </div>
-                            <div id="table2Proj" class="tab-content">
+                            <div id="table2PP" class="tab-content">
                                 <table>
                                     <tr>
                                         <th>ta 2</th>
@@ -785,7 +812,141 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div id="table3Proj" class="tab-content">
+                            <div id="table3PP" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>3</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table id="scriptsTable">
+                    <tr class="tableHead">
+                        <td>
+                            <h2>Scripts</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1Scripts', 'scriptsTable')">This Website/ Server</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2Scripts', 'scriptsTable')">St. Mary's</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3Scripts', 'scriptsTable')">Rick Roll</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="table1Scripts" class="tab-content active">
+                                <table>
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table2Scripts" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>ta 2</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table3Scripts" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>3</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table id="schoolProjectsTable">
+                    <tr class="tableHead">
+                        <td>
+                            <h2>School Projects</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1School', 'schoolProjectsTable')">This Website/ Server</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2School', 'schoolProjectsTable')">St. Mary's</button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3School', 'schoolProjectsTable')">Rick Roll</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="table1School" class="tab-content active">
+                                <table>
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table2School" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>ta 2</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table3School" class="tab-content">
                                 <table>
                                     <tr>
                                         <th>3</th>
@@ -807,7 +968,7 @@
             </section>
         </div>
 
-        <br>
+        <br><span class="spacer"></span>
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: contact@elwinm.ca</p>
@@ -820,6 +981,7 @@
     <footer>
         <p>Elwin Moolakkattu 2023</p>
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
 
 </html>
