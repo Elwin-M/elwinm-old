@@ -764,13 +764,23 @@
                     <tr class="tableHead">
                         <td>
                             <h2>Personal Projects</h2>
+                            <p>*While these are the only projects/ scripts listed, it is by no means my only experience</p>
                         </td>
                     </tr>
                     <tr>
                         <td class="tab-btn-container">
-                            <button class="tab-btn active" onclick="openTab(event, 'table1PP', 'personalProjectsTable')">This Website/ Server!</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table2PP', 'personalProjectsTable')">St. Mary's</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table3PP', 'personalProjectsTable')">Rick Roll</button>
+                            <button class="tab-btn active" onclick="openTab(event, 'table1PP', 'personalProjectsTable')">
+                                This Website/ Server!<br />
+                                <span style="font-weight: normal;">LAMP Stack, HTML, CSS, JS</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2PP', 'personalProjectsTable')">
+                                St. Mary's<br />
+                                <span style="font-weight: normal;">PHP, MySQL, Cookies, Authentication</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3PP', 'personalProjectsTable')">
+                                Rick Roll<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>
                         </td>
                     </tr>
 
@@ -779,79 +789,76 @@
                             <div id="table1PP" class="tab-content active">
                                 <p>
                                     This website and the server it's hosted on is an amalgamation of everything I've ever learned in regards to IT. <br />
-                                    It is completely built from scratch and every bit of it is hand coded by me.
-                                    The webserver is hosted on a Raspberry Pi running Apache. <br />
-                                    The website features SSL encryption, automated certificate renewal, dynamic DNS so that there is minimal downtime,
-                                    as well as Cloudflare CDN and caching services. It is also reactive so no matter what display or device you are using, 
-                                    you will have a pleasant experience <br />
-                                    <br />
+                                    The start of my full-stack developer journey. It is completely built from scratch and every bit of it is hand coded by me. <br />
+                                    The web server is hosted on a Raspberry Pi running Apache. It features SSL encryption, automated certificate renewal, <br />
+                                    dynamic DNS so that there is minimal downtime, as well as Cloudflare CDN and caching services. <br />
+                                    It is also reactive so no matter what display or device you are using, you will have a pleasant experience. <br /><br />
+
                                     Unfortunately most of the work is done behind the scenes so it is not directly visible to the end user, so I have to try and detail it here. <br />
-                                    Most of the code for the website is also available on my 
-                                    <a href="https://github.com/Project-Guardian" target="_blank">GitHub</a> if you are interested.
-                                    However, parts of it are not due to privacy and security reasons (i.e. SQL connection forms, and server files) <br />
-                                    <br />
-                                    Other features of my servers are: htaccess configurations, automatic redirects (including 
-                                    <a href="https://elwinm.ca/404.html" target="_blank">error 40X's</a>
-                                    ),
+                                    Most of the code for the website is also available on my
+                                    <a href="https://github.com/Project-Guardian" target="_blank">GitHub</a> if you are interested. <br />
+                                    However, parts of it are not due to privacy and security reasons (i.e. SQL connection forms, and certain server files). <br /><br />
+
+                                    Other features of my servers are: htaccess configurations, automatic redirects (including
+                                    <a href="https://elwinm.ca/404.html" target="_blank">error 4XX</a>),<br />
                                     <a href="https://games.elwinm.ca" target="_blank">game servers</a>
-                                    (Minecraft, Terraria, one-off spin ups), other subdomains, reverse proxy services for public network facing devices,
-                                    an OpenVPN connection for remote access, Samba network shares,
-                                    and virtual hosts for running other servers (
-                                    <a href="https://plex.elwinm.ca" target="_blank">Plex</a>
-                                    , OctoPrint, and PiHole) <br />
-                                    <br />
-                                    I also host my families public servers utilizing virtual hosts, but those can not be shared due to privacy reasons <br />
-                                    <br />
-                                    This server was my first foray into the Linux environment and I have amassed a great amount of knowledge in terms of
-                                    but not limited to, design, developement (full-stack and otherwise), system administration/ management,
-                                    network management, backup management, and best security practices
+                                    (Minecraft, Terraria, one-off spin ups), other subdomains, reverse proxy services for public network facing devices, <br />
+                                    an OpenVPN connection for remote access, Samba network shares, and virtual hosts for running other servers (
+                                    <a href="https://plex.elwinm.ca" target="_blank">Plex</a>, OctoPrint, and PiHole). <br /><br />
+
+                                    I also host my families public servers utilizing virtual hosts, but those can not be shared due to privacy reasons. <br /><br />
+
+                                    This server was my first foray into the Linux environment and I have amassed a great amount of knowledge in terms of <br />
+                                    but not limited to, design, developement (full-stack and otherwise), system administration/ management (users, CRON, group policy), <br />
+                                    network management (DHCP, CDN, DNS), backup management, and best security practices. <br /><br />
+
+                                    Cloudflare services are also used to hide sensitive data from bots and crawlers, as well as their proxy and firewall services. <br />
+                                    Once again, while a majority of my experiences have been detailed here, it is by no means all of it. <br />
+                                    Several hundred hours of designing, developement, troubleshooting, and general labour have been put into all of this.
                                 </p>
-<!--                                <table>
-                                    <tr>
-                                        <th>Column 1</th>
-                                        <th>Column 2</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Row 1, Column 1</td>
-                                        <td>Row 1, Column 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Row 2, Column 1</td>
-                                        <td>Row 2, Column 2</td>
-                                    </tr>
-                                </table>-->
                             </div>
                             <div id="table2PP" class="tab-content">
-                                <table>
-                                    <tr>
-                                        <th>ta 2</th>
-                                        <th>Column 2</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Row 1, Column 1</td>
-                                        <td>Row 1, Column 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Row 2, Column 1</td>
-                                        <td>Row 2, Column 2</td>
-                                    </tr>
-                                </table>
+                                <p>
+                                    <a href="https://elwinm.ca/stmarys" target="_blank">St. Mary's</a> <br />
+                                    <a href="https://elwinm.ca/stmarys/admin" target="_blank">St. Mary's Admin</a> <br /><br />
+
+                                    This was created as a volunteer project for my local church to: <br />
+                                    Give back to my community and to expand my own knowledge. Everything was created by me from scratch. <br />
+                                    I actively work on the website to make changes as per the requirements of the members and maintain it as necessary. <br /><br />
+
+                                    This webpage is displayed in a kiosk style environment at the church (also set up and managed by me as needed). <br />
+                                    It features a sleek and responsive page. There are three carasouls, one is for the rotating images, the second <br />
+                                    is for the information display (Birthdays, Wedding Anniversaries, and Sponsors), and the third is for the News section at the bottom. <br /><br />
+
+                                    The images, information display, and news all get their content via a connection to a MySQL database. <br />
+                                    I also created an admin panel so that the administrative members can access it to add or edit the data. <br />
+                                    The sponsors data is updated weekly before the Mass so it is vital that the website retrieves the newest data as soon as possible. <br /><br />
+
+                                    The admin panel features a login using properly encrypted users in a database with hashed and salted values. <br />
+                                    While there was originally a sign-up page created which featured the ability for anyone to create an account, <br />
+                                    it was not necessary as the website is not open to the public. So it was later removed. <br />
+                                    Cookies are used that time out automatically so that the user is not logged in permanently (security reasons). <br />
+                                    It features a simple interface so that anyone of varying ages will have no trouble using it. <br /><br />
+
+                                    One of the major challenges I encountered when building this website was retrieving the accurate dates as the requirements<br />
+                                    of the church was to use dates starting from Sunday to Saturday, where MySQL functions retrieve it as Monday to Sunday. <br />
+                                    I had to create my own functions for this specific need as there were no alternatives (at least at the time). <br /><br />
+
+                                    For the admin panel, I have created a guest user that connects to a mock database that can showcase the abilities of the main one. <br />
+                                    However as is was not meant for production, it is not entirely polished and not fully functional <br />
+                                    (i.e. changes made are not visible anywhere else but the admin panel). It is still able to display what the real one can do. <br />
+                                    While this goes against all proper security practises, I believe in an isolated environment, this will be okay, <br />
+                                    the username and password are both "guest" Please use this account if you are interested in seeing the admin panel.
+                                </p>
                             </div>
                             <div id="table3PP" class="tab-content">
-                                <table>
-                                    <tr>
-                                        <th>3</th>
-                                        <th>Column 2</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Row 1, Column 1</td>
-                                        <td>Row 1, Column 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Row 2, Column 1</td>
-                                        <td>Row 2, Column 2</td>
-                                    </tr>
-                                </table>
+                                <p>
+                                    <a href="https://elwinm.ca/rr" target="_blank">Rick Roll</a> (Link is not active yet)<br /><br />
+
+                                    This page was purely created as a joke. It features an embedded YouTube video of a timer countdown, <br />
+                                    and a button that lets you stop the JavaScript function that will activate at the end of the video running in the background <br />
+                                    that will automatically redirect the page to Rick Astley's Never Gonna Give You Up <br />
+                                </p>
                             </div>
                         </td>
                     </tr>
@@ -864,9 +871,18 @@
                     </tr>
                     <tr>
                         <td class="tab-btn-container">
-                            <button class="tab-btn active" onclick="openTab(event, 'table1Scripts', 'scriptsTable')">This Website/ Server</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table2Scripts', 'scriptsTable')">St. Mary's</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table3Scripts', 'scriptsTable')">Rick Roll</button>
+                            <button class="tab-btn active" onclick="openTab(event, 'table1Scripts', 'scriptsTable')">
+                                File Size Management<br />
+                                <span style="font-weight: normal;">Python</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2Scripts', 'scriptsTable')">
+                                File Size Management<br />
+                                <span style="font-weight: normal;">PowerShell</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3Scripts', 'scriptsTable')">
+                                Hardlink Creator<br />
+                                <span style="font-weight: normal;">PowerShell</span>
+                            </button>
                         </td>
                     </tr>
 
@@ -931,9 +947,18 @@
                     </tr>
                     <tr>
                         <td class="tab-btn-container">
-                            <button class="tab-btn active" onclick="openTab(event, 'table1School', 'schoolProjectsTable')">This Website/ Server</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table2School', 'schoolProjectsTable')">St. Mary's</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table3School', 'schoolProjectsTable')">Rick Roll</button>
+                            <button class="tab-btn active" onclick="openTab(event, 'table1School', 'schoolProjectsTable')">
+                                Rick Roll<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2School', 'schoolProjectsTable')">
+                                Rick Roll<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3School', 'schoolProjectsTable')">
+                                Rick Roll<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>
                         </td>
                     </tr>
 

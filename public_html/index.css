@@ -336,6 +336,7 @@ a[target="_blank"]::after {
 
 #projects button {
 	font-weight: bold;
+	margin-bottom: 7px;
 }
 
 a:link, a:visited {
