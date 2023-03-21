@@ -768,7 +768,7 @@
                     </tr>
                     <tr>
                         <td class="tab-btn-container">
-                            <button class="tab-btn active" onclick="openTab(event, 'table1PP', 'personalProjectsTable')">This Website/ Server</button>
+                            <button class="tab-btn active" onclick="openTab(event, 'table1PP', 'personalProjectsTable')">This Website/ Server!</button>
                             <button class="tab-btn" onclick="openTab(event, 'table2PP', 'personalProjectsTable')">St. Mary's</button>
                             <button class="tab-btn" onclick="openTab(event, 'table3PP', 'personalProjectsTable')">Rick Roll</button>
                         </td>
@@ -778,8 +778,33 @@
                         <td>
                             <div id="table1PP" class="tab-content active">
                                 <p>
-                                    This website and the server it's hosted on is an amalgamation of everything I've ever learned in regards to IT.<br />
-                                    It is completely built from scratch and every bit of it is hand coded by me. 
+                                    This website and the server it's hosted on is an amalgamation of everything I've ever learned in regards to IT. <br />
+                                    It is completely built from scratch and every bit of it is hand coded by me.
+                                    The webserver is hosted on a Raspberry Pi running Apache. <br />
+                                    The website features SSL encryption, automated certificate renewal, dynamic DNS so that there is minimal downtime,
+                                    as well as Cloudflare CDN and caching services. It is also reactive so no matter what display or device you are using, 
+                                    you will have a pleasant experience <br />
+                                    <br />
+                                    Unfortunately most of the work is done behind the scenes so it is not directly visible to the end user, so I have to try and detail it here. <br />
+                                    Most of the code for the website is also available on my 
+                                    <a href="https://github.com/Project-Guardian" target="_blank">GitHub</a> if you are interested.
+                                    However, parts of it are not due to privacy and security reasons (i.e. SQL connection forms, and server files) <br />
+                                    <br />
+                                    Other features of my servers are: htaccess configurations, automatic redirects (including 
+                                    <a href="https://elwinm.ca/404.html" target="_blank">error 40X's</a>
+                                    ),
+                                    <a href="https://games.elwinm.ca" target="_blank">game servers</a>
+                                    (Minecraft, Terraria, one-off spin ups), other subdomains, reverse proxy services for public network facing devices,
+                                    an OpenVPN connection for remote access, Samba network shares,
+                                    and virtual hosts for running other servers (
+                                    <a href="https://plex.elwinm.ca" target="_blank">Plex</a>
+                                    , OctoPrint, and PiHole) <br />
+                                    <br />
+                                    I also host my families public servers utilizing virtual hosts, but those can not be shared due to privacy reasons <br />
+                                    <br />
+                                    This server was my first foray into the Linux environment and I have amassed a great amount of knowledge in terms of
+                                    but not limited to, design, developement (full-stack and otherwise), system administration/ management,
+                                    network management, backup management, and best security practices
                                 </p>
 <!--                                <table>
                                     <tr>
@@ -972,8 +997,8 @@
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: contact@elwinm.ca</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/elwinwm">Elwin M</a></p>
-            <p>GitHub: <a href="https://github.com/Project-Guardian">Elwin M</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/elwinwm" target="_blank">Elwin M</a></p>
+            <p>GitHub: <a href="https://github.com/Project-Guardian" target="_blank">Elwin M</a></p>
             <p>Phone: <!--sse-->+1 647-921-6841<!--/sse--></p>
             <p>Location: Ontario, Canada</p>
         </section>
