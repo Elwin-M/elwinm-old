@@ -53,15 +53,13 @@
 	width: 100%;
 	height: 90px;
 }
-.tab-btn
-{
+.tab-btn {
 	background-color: lightgray;
 	border: none;
 	cursor: pointer;
 	padding: 10px 20px;
 }
-.tab-btn.active
-{
+.tab-btn.active {
 	background-color: gray;
 	color: white;
 }
@@ -336,7 +334,7 @@ a[target="_blank"]::after {
 
 #projects button {
 	font-weight: bold;
-	margin-bottom: 7px;
+	margin-bottom: 0px;
 }
 
 a:link, a:visited {
