@@ -1,0 +1,17 @@
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <br><span class="spacer"></span>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: contact@elwinm.ca</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/elwinwm" target="_blank">Elwin M</a></p>
+        <p>GitHub: <a href="https://github.com/Project-Guardian" target="_blank">Elwin M</a></p>
+        <p>Phone: <!--sse-->+1 647-921-6841<!--/sse--></p>
+        <p>Location: Ontario, Canada</p>
+    </section>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
