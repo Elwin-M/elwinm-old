@@ -9,7 +9,7 @@
     <script>
         //Set timers here in seconds:
         var newsTime = 10;
-        var imageTime = 10;
+        var imageTime = 20;
         var contentTime = 10;
     </script>
 </head>
