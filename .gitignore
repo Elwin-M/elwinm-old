@@ -4,4 +4,4 @@ stmarys_private/
 public_html/stmarys/images/
 .vs/
 .vscode/
-.db
+Thumbs.db
