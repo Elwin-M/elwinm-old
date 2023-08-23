@@ -103,10 +103,10 @@
                     <?php $holy_mass = get_holy_mass();
                     if (sizeof($holy_mass) == 0) {
                         echo "<script>var sponsorsNoContent = true</script>"; $sponsorsNoContent = true;
-                        echo "<p class='slideshowNoEvent'>There are <br> no sponsors <br> for this week</p>";
+                        echo "<p class='slideshowNoEvent'>There are <br> no special qurbanas <br> for this week</p>";
                     } else {
                         echo "<script>var sponsorsNoContent = false</script>"; $sponsorsNoContent = false;
-                        echo "<h1 class='slideshowEvent'>SPONSORS THIS WEEK:</h1>";
+                        echo "<h1 class='slideshowEvent'>SPECIAL QURBANA:</h1>";
                         foreach ($holy_mass as $Sid => $Sarray) {
                             echo "<p class='slideshowEvent'>" . $Sarray[0] . "</p>";
                         }

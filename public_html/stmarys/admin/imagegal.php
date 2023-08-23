@@ -29,7 +29,7 @@ https://artisansweb.net/drag-drop-file-upload-using-javascript-php/
   <!-- <script src="scripts/uploadImages.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script>
+<!-- <script>
   $(document).ready(function () {
     $("html").on("dragover", function (e) {
       e.preventDefault();
@@ -79,6 +79,69 @@ https://artisansweb.net/drag-drop-file-upload-using-javascript-php/
         }
       });
     }
+  });
+</script> -->
+<script>
+  $(document).ready(function () {
+    console.log("Document is ready.");
+
+    $("html").on("dragover", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("Dragover event occurred.");
+    });
+
+    $("html").on("drop", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("Drop event occurred.");
+    });
+
+    $('#drop_file_area').on('dragover', function () {
+      console.log("Dragover on drop area.");
+      $(this).addClass('drag_over');
+      return false;
+    });
+
+    $('#drop_file_area').on('dragleave', function () {
+      console.log("Dragleave on drop area.");
+      $(this).removeClass('drag_over');
+      return false;
+    });
+
+    $('#drop_file_area').on('drop', function (e) {
+      e.preventDefault();
+      $(this).removeClass('drag_over');
+      console.log("Files dropped on drop area.");
+      var formData = new FormData();
+      var files = e.originalEvent.dataTransfer.files;
+      for (var i = 0; i < files.length; i++) {
+        formData.append('file[]', files[i]);
+      }
+      uploadFormData(formData);
+    });
+
+    function uploadFormData(form_data) {
+      console.log("Uploading form data...");
+      $.ajax({
+        url: "uploadImages.php",
+        method: "POST",
+        data: form_data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+          console.log("Upload success:", data);
+          $('#uploaded_file').append(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.log("Upload error:", textStatus, errorThrown);
+          $('#uploaded_file').append("An error occurred during upload.");
+        }
+      });
+    }
+
+    console.log("Script setup completed.");
   });
 </script>
 </head>

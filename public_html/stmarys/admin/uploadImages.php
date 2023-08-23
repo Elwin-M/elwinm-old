@@ -36,6 +36,10 @@
 
 // <?php
 // Include the database connection file
+error_reporting(E_ALL);             // Report all types of errors
+ini_set('display_errors', 1);       // Display errors in the output
+ini_set('display_startup_errors', 1); // Display startup errors in the output
+
 include('../../../stmarys_private/db_admin_connection.php');
 
 $conn = OpenCon();
