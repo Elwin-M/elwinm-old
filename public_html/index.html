@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Elwin's Portfolio WIP</title>
+    <title>Elwin's Portfolio</title>
     <link rel="stylesheet" href="index.css">
 
     <script>
@@ -43,10 +43,18 @@
         function scrollToSection(id) {
             var targetElement = document.querySelector(id);
             var elementPosition = targetElement.offsetTop;
-            var offsetPosition = elementPosition - 100;
+            var offsetAmount;
+            var mobileOffsetAmount = 58;
+            if (id === "#about") {
+                offsetAmount = 100;
+            }
+            else {
+                offsetAmount = 77;
+            }
+            var offsetPosition = elementPosition - offsetAmount;
 
             if (window.innerWidth <= 600) {
-                offsetPosition = elementPosition - 58;
+                offsetPosition = elementPosition - mobileOffsetAmount;
             }
 
             window.scrollTo({
@@ -54,12 +62,13 @@
                 behavior: "smooth"
             });
         }
+
     </script>
 </head>
 
 <body>
     <header>
-        <h1>Elwin Moolakkattu WIP</h1>
+        <h1><!--sse-->Elwin Moolakkattu<!--/sse--></h1>
         <nav class="navbar">
             <input type="checkbox" id="navbar-toggler" class="navbar-toggler">
             <label for="navbar-toggler" class="navbar-toggler-icon"></label>
@@ -69,86 +78,64 @@
                 <li><a onclick="scrollToSection('#tools')">Tools</a></li>
                 <li><a onclick="scrollToSection('#experience')">Experience</a></li>
                 <li><a onclick="scrollToSection('#education')">Education</a></li>
-                <li><a onclick="scrollToSection('#projects')">Projects</a></li>
+                <li><a onclick="scrollToSection('#projects')">Projects+</a></li>
                 <li><a onclick="scrollToSection('#contact')">Contact</a></li>
-
             </ul>
         </nav>
-
     </header>
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <!--            
             <p>
-            Welcome to my portfolio! My name is Elwin Moolakkattu andsfdsd I am a Systems Enasdsagineer with a strong background in
-            technical sales. I have a B.A. in Information Technology from York University and a minor in Business
-            Administration.
-
-            I understand customer requirements, environments, and challenges, and use this knowledge to design and propose
-            security solutions and implementation requirements. I also stay up to date on industry trends and changes in the
-            security landscape, and am able to lead conversations on these topics.
-
-            In addition to my technical skills, I have strong troubleshooting and problem-solving abilities, and am able to
-            analyze difficult problems in complex environments using a systematic approach. I also have excellent
-            communication and presentation skills, and am able to deliver training and education sessions to channel
-            partners and distributors.
-
-            In my previous roles, I have gained experience with a variety of programming languages including PHP, Python,
-            Java, HTML, CSS, and JavaScript. I have also worked with databases such as MySQL, Oracle DBMS, and MS Access. I
-            have a strong understanding of networking technologies, API-based security and compliance standards, and have
-            some experience with AWS.
-
-            Thank you for visiting my portfolio. Please feel free to contact me for any further information or to discuss
-            potential opportunities.
-            <br>
-            As a highly experienced and skilled IT professional with a background in software engineering, systems
-            administration, and customer service, I am excited to present my portfolio and showcase the skills and
-            experience I have to offer. With over 3 years of experience in enterprise software engineering and technical
-            support, I have a strong understanding of Linux systems administration and experience with web server
-            administration (Apache Tomcat) and database management (MySQL). I am also experienced in scripting (Bash/PHP)
-            and automation tools, and have a strong knowledge of OS hardening, system security, and auditing, as well as
-            experience with high availability configuration and disaster recovery testing.
-
-            I am also well-versed in Linux networking and Ubuntu, and have experience with Nginx, Apache, PHP, MySQL, and
-            other technologies. I possess excellent verbal communication skills, problem-solving abilities, attention to
-            detail, and exceptional time management and organizational skills. I am passionate about growth,
-            entrepreneurial, and comfortable in a fast-paced environment.
-
-            In addition, I have strong coding skills in Python and experience in SciPy packages such as Numpy and Pandas. I
-            am experienced in building data processing tools and analyzing and organizing raw data, and have solid knowledge
-            in programming fundamentals, mathematics, and statistics. I also have strong web scraping skills, with
-            experience using Jupyter Notebook and MATLAB.
-
-            My past roles include working as a Full-Stack Developer and Maintainer at a church, where I was responsible for
-            spinning up and configuring the web server on a Raspberry Pi, creating a kiosk styled website and its admin
-            panel from scratch all in less than 4 weeks. I also have experience as a Customer Experience Representative
-            where my duties involve finding, recommending, and informing solutions to clients based on their requirements.
-
-            I have a B.A. in Information Technology from York University, where I specialized in systems administration,
-            systems analysis and design, network administration and design, client-server systems, requirements management,
-            database management systems, web mining, and applied artificial intelligence. I also have a minor in Business
-            Administration from York University.
-
-            I look forward to the opportunity to bring my skills and experience to your organization and make valuable
-            contributions to your team. Thank you for considering my poro.
-            </p>
-            -->
+                <b>Short Version:</b></br> 
+                As a Full Stack Developer and DevOps enthusiast, I leverage my comprehensive knowledge of software development, systems administration, and Agile methodologies to create cutting-edge solutions that impact people's lives and revolutionize industries. My continuous drive for learning, ability to solve complex problems, and commitment to community success define my journey in this fast-paced tech industry.
+            </p></br> 
             <p>
-                I'm a dedicated IT professional with a passion for developing cutting-edge technologies that make a real difference in people's lives. With years of experience in the field, I've honed my skills in software development, systems analysis, and project management, among other areas.
+                <b>Longer Version:</b></br> 
+                As an accomplished Full Stack Developer, DevOps enthusiast, and AI aspirant, I hold a B.A. Honours in Information Technology and a minor in Business Administration from York University. My experience spans across software development, systems analysis, and project management, bolstered by a robust technical skillset in web development, system administration, networking, and database creation and management. My hands-on experience with Docker, Kubernetes, REST APIs, and Git, along with my proficiency in Java, Python, PHP, and other programming languages, form the backbone of my technical abilities.
             </p>
             <p>
-                One of my primary ambitions is to help drive the development of AI and other advanced technologies that can revolutionize industries and improve people's quality of life. I believe that AI has the potential to transform everything from healthcare to transportation to education, and I'm excited to be a part of this rapidly evolving field.
+                One of my areas of expertise lies in managing the reliability, security, and integrity of large, cloud-based Linux infrastructures. I've also successfully designed, developed, and managed databases, demonstrating my comprehensive understanding of system administration and networking tasks. My knowledge extends to building web servers on platforms like Raspberry Pi, further exhibiting my commitment to finding innovative solutions to complex problems.
             </p>
             <p>
-                In addition to my technical expertise, I'm also committed to staying up-to-date with the latest research and best practices in the industry. I'm constantly learning and growing, whether that means attending conferences, networking with peers, or exploring new technologies on my own time.
+                Driven by an insatiable curiosity and a desire to make a difference, I continually explore the transformative power of AI and advanced technologies. I am committed to staying abreast of industry trends, learning through attending conferences, networking with peers, and independently exploring new technologies. This continuous learning, coupled with my deep understanding of tech infrastructures and database management, enables me to contribute significantly to the rapidly evolving tech landscape.
             </p>
             <p>
-                Ultimately, my goal is to use my skills and experience to create better, more effective technologies that can benefit people around the world. Whether I'm working on a complex software project or collaborating with colleagues on an AI research initiative, I'm always striving to make a positive impact and push the boundaries of what's possible.
+                My career journey is marked not only by my technical skills but also my ability to solve complex problems, determination to succeed, and focus on creating value for customers, colleagues, and the community. I am a natural collaborator and thrive in cross-functional teams, leveraging my strong communication skills to ensure project success. Whether leading challenging software projects or participating in AI research initiatives, my goal remains to make a positive impact, pushing the boundaries of what's possible.
             </p>
+            <p>
+                My ambition is to leverage my expertise to create better, more effective technologies that can benefit people worldwide, within dynamic organizations. I am driven to build an incredible, profitable company that positively impacts our customers, our employees, and our stakeholders, while also giving back to our communities. As I forge ahead in this exciting industry, I am guided by a simple mantra – always learning, always improving.
+            </p>
+                <!-- I am an accomplished Full Stack Developer, DevOps enthusiast, and AI aspirant, with a B.A. Honours in Information Technology and a minor in Business Administration from York University. With years of experience in software development, systems analysis, and project management, I have managed to develop a diverse technical skillset that spans across web development, system administration, and DevOps methodologies. My hands-on experience with Docker, Kubernetes, REST APIs, and Git, coupled with my proficiency in Java, Python, PHP, and other programming languages, forms the backbone of my software development prowess.
+            </p>
+            <p>
+                Driven by an insatiable curiosity and a desire to make a difference, I actively seek opportunities to expand my knowledge and explore the transformative power of AI and advanced technologies. I remain committed to staying on top of industry trends, continually learning through attending conferences, networking with peers, and independently exploring new technologies. My passion for the subject, coupled with my in-depth understanding of cloud-based Linux infrastructures and database management, prepares me to navigate and contribute significantly to the rapidly evolving tech landscape.
+            </p>
+            <p>
+                My professional journey is not only defined by my technical skills but also my ability to solve complex problems, my determination to succeed, and my focus on creating value for customers, colleagues, and the community. As a natural collaborator, I thrive in cross-functional teams, leveraging my strong communication skills to ensure project success. Whether leading challenging software projects or participating in AI research initiatives, my goal remains to make a positive impact, pushing the boundaries of what's possible.
+            </p>
+            <p>
+                With a commitment to creating better, more effective technologies that can benefit people worldwide, I am excited about the potential to leverage my expertise in a dynamic organization. My ultimate objective is to build an incredible, profitable company that positively impacts our customers, our employees, and our stakeholders, while also giving back to our communities. As I move forward in this exciting industry, I am motivated by a simple mantra – always learning, always improving.
+            </p> -->
+
+            <!-- <p>
+                As a dedicated IT professional, I'm passionate about creating cutting-edge technologies that make a real difference in people's lives. With years of experience in software development, systems analysis, and project management, I've honed my skills and gained expertise in a variety of areas.
+            </p>
+            <p>
+                One of my primary ambitions is to contribute to the development of AI and other advanced technologies that have the potential to revolutionize industries and improve people's quality of life. With a deep interest in the transformative power of AI, I'm excited to be part of this rapidly evolving field.
+            </p>
+            <p>
+                In addition to my technical skills, I'm committed to staying up-to-date with the latest research and best practices in the industry. I actively seek out opportunities to learn and grow, whether that means attending conferences, networking with peers, or exploring new technologies on my own time.
+            </p>
+            <p>
+                My ultimate goal is to leverage my expertise to create better, more effective technologies that can benefit people around the world. Whether working on complex software projects or collaborating with colleagues on AI research initiatives, I'm always focused on making a positive impact and pushing the boundaries of what's possible.
+            </p>
+            <p>
+                Furthermore, I am an experienced software engineer with a passion for creating innovative solutions to complex problems. I have expertise in various programming languages, including Python, Java, and C#, and I am adept at working with both front-end and back-end technologies. My ability to collaborate with cross-functional teams and my strong communication skills have been key to the success of many of my projects. I am highly motivated and thrive in fast-paced environments, where I can continuously learn and grow. I am excited about the opportunity to bring my skills and experience to a new role and contribute to the success of a dynamic organization.
+            </p> -->
         </section>
 
-        <br>
+        <br><span class="spacer"></span>
         <section id="skills">
             <table>
                 <tr>
@@ -186,12 +173,14 @@
                                 <tr>
                                     <td>
                                         <ul>
+                                            <li>Relational and Non-Relational DB Design</li>
                                             <li>Database Design</li>
                                             <li>Database Administration</li>
                                             <li>Microsoft Access</li>
                                             <li>MySQL</li>
                                             <li>Oracle DBMS</li>
                                             <li>phpMyAdmin</li>
+                                            <li>PostgreSQL</li>
                                             <li>SQL</li>
                                         </ul>
                                     </td>
@@ -199,7 +188,7 @@
                             </table>
                             <table>
                                 <tr>
-                                    <th>Networking Skills</th>
+                                    <th>Networking</th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -207,6 +196,8 @@
                                             <li>CDN Management</li>
                                             <li>DHCP Management</li>
                                             <li>DNS Management</li>
+                                            <li>Firewall Management</li>
+                                            <li>IPv4/IPv6 Management</li>
                                             <li>Network Security</li>
                                             <li>Reverse Proxy Management</li>
                                             <li>Router And Switch Management</li>
@@ -226,26 +217,6 @@
                         <div class="skills">
                             <table>
                                 <tr>
-                                    <th>Programming Languages</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <ul>
-                                            <li>Bash Scripting</li>
-                                            <li>C#</li>
-                                            <li>GO</li>
-                                            <li>HTML/CSS</li>
-                                            <li>Java</li>
-                                            <li>JavaScript</li>
-                                            <li>PHP</li>
-                                            <li>PowerShell Scripting</li>
-                                            <li>Python</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table>
-                                <tr>
                                     <th>Project Management</th>
                                 </tr>
                                 <tr>
@@ -259,6 +230,52 @@
                                     </td>
                                 </tr>
                             </table>
+                            <table>
+                                <tr>
+                                    <th>Public API's</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Cloudflare</li>
+                                            <li>Google</li>
+                                            <li>OpenAI</li>
+                                            <li>PubMed</li>
+                                            <li>Riot Games</li>
+                                            <li>Spotify</li>
+                                            <li>Twitter</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Software Development</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Bash Scripting</li>
+                                            <li>C#</li>
+                                            <li>GO (Golang)</li>
+                                            <li>HTML/CSS</li>
+                                            <li>Java</li>
+                                            <li>JavaScript</li>
+                                            <li>Node.js</li>
+                                            <li>PHP</li>
+                                            <li>PowerShell Scripting</li>
+                                            <li>Python</li>
+                                            <li>React</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="skills">
                             <table>
                                 <tr>
                                     <th>Web Development</th>
@@ -278,15 +295,9 @@
                                     </td>
                                 </tr>
                             </table>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="skills">
-                            <table class="tableHalf">
+                            <table>
                                 <tr>
-                                    <th>Other Skills</th>
+                                    <th>Other</th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -304,9 +315,9 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="tableHalf">
+                            <table>
                                 <tr>
-                                    <th>Other Skills</th>
+                                    <th>Other</th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -330,7 +341,7 @@
             </table>
         </section>
 
-        <br>
+        <br><span class="spacer"></span>
         <section id="tools">
             <table>
                 <tr>
@@ -351,6 +362,7 @@
                                             <li>Eclipse</li>
                                             <li>JupyterLab</li>
                                             <li>NetBeans</li>
+                                            <li>VS Code</li>
                                             <li>Visual Studio</li>
                                         </ul>
                                     </td>
@@ -358,13 +370,18 @@
                             </table>
                             <table>
                                 <tr>
-                                    <th>Office Software</th>
+                                    <th>Productivity Tools</th>
                                 </tr>
                                 <tr>
                                     <td>
                                         <ul>
+                                            <li>Adobe Suite</li>
                                             <li>Google Workspace</li>
+                                            <li>Microsoft Automate</li>
                                             <li>Microsoft Office</li>
+                                            <li>Microsoft SharePoint</li>
+                                            <li>NPM (Node Package Manager)</li>
+                                            <li>WordPress</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -412,6 +429,7 @@
                                     <td>
                                         <ul>
                                             <li>Docker</li>
+                                            <li>Kubernetes</li>
                                             <li>Oracle VirtualBox</li>
                                             <li>Windows Sandbox</li>
                                             <li>Windows Subsystem For Linux</li>
@@ -421,7 +439,7 @@
                             </table>
                             <table>
                                 <tr>
-                                    <th>Other Tools</th>
+                                    <th>Other</th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -446,7 +464,7 @@
             </table>
         </section>
 
-        <br>
+        <br><span class="spacer"></span>
         <div id="tabs">
             <section id="experience">
                 <table id="experienceTable">
@@ -458,12 +476,12 @@
                     <tr>
                         <td class="tab-btn-container">
                             <button class="tab-btn active" onclick="openTab(event, 'table1Exp', 'experienceTable')">
-                                <span style="margin-bottom: 7px; font-weight: bold;">St. Mary's Syriac Orthodox Church</span><br />
-                                Full-Stack Developer And Maintainer
+                                <span style="margin-bottom: 7px; font-weight: bold;">St. Mary's S.O.C.</span><br />
+                                Full-Stack Dev. And Maintainer
                             </button>
                             <button class="tab-btn" onclick="openTab(event, 'table2Exp', 'experienceTable')">
                                 <span style="margin-bottom: 7px; font-weight: bold;">Indigo Books And Music</span><br />
-                                Customer Experience Representative
+                                Customer Experience Rep.
                             </button>
                             <button class="tab-btn" onclick="openTab(event, 'table3Exp', 'experienceTable')">
                                 <span style="margin-bottom: 7px; font-weight: bold;">McDonald's Corporation</span><br />
@@ -476,8 +494,8 @@
                             <div id="table1Exp" class="tab-content active">
                                 <table>
                                     <tr>
-                                        <th>Time Active: <span style="font-weight:normal">01/2020 - PRESENT</span></th>
-                                        <th>Employment: <span style="font-weight:normal">Volunteer</span></th>
+                                        <th>Time Active: <span style="font-weight:normal"><br class="mobileDisplayShow" />01/2020 - PRESENT</span></th>
+                                        <!--<th>Employment: <span style="font-weight:normal"><br class="mobileDisplayShow" />Volunteer</span></th>-->
                                     </tr>
                                     <tr>
                                         <th>Responsibilities</th>
@@ -486,23 +504,40 @@
                                     <tr>
                                         <td>
                                             <ul>
-                                                <li>Built a web server on a Raspberry Pi to host the website</li>
-                                                <li>Collaborated with church leaders to ensure the website met the needs of the congregation</li>
+                                                <li>Engineered, launched, and presently maintain a bespoke web server for the organization, leveraging my skills in server architecture, system administration, and management</li>
+                                                <!-- <li>Collaborated with  leaders to ensure the website met the needs of the congregation</li>
                                                 <li>Created an admin panel to manage and edit all content on the website, including image uploads, which has saved time and improved efficiency</li>
                                                 <li>Designed and implemented a homepage with carousels displaying birthdays, anniversaries, and contributions of church members</li>
                                                 <li>Developed and maintained a kiosk style website using a LAMP stack</li>
-                                                <li>Implemented a news section at the bottom of the homepage</li>
+                                                <li>Implemented a news section at the bottom of the homepage</li> -->
+                                                <li>Developed and consumed RESTful APIs for seamless data integration across microservices</li>
+                                                <li>Designing and managing relational and non-relational databases, ensuring data consistency, integrity, and security</li>
+                                                <li>Built and maintained a Kubernetes-based compute platform, streamlining deployment processes and practicing the principles of containerization technologies in a production environment</li>
+                                                <li>Practiced continuous delivery, ensuring efficient, reliable, and safe value delivery to users</li>
+                                                <li>Participated in a flexible on-call rotation, managing, and troubleshooting all types of issues</li>
+                                                <li>Performed routine system maintenance, upgrades, and migrations while maintaining system reliability and integrity</li>
+                                                <li>Managed the reliability, security, and integrity of the organization's Linux infrastructure, demonstrating my ability to operate in a cloud-based environment</li>
+                                                <li>Worked on the continuous improvement of the developer experience by providing tools, libraries, automation, services, and establishing efficient software engineering practices</li>
+                                                <li>Played a lead role in project milestones, and features, showcasing my skills in project management and my ability to contribute to the cultural, process, and changes within the team</li>
+                                                <li>Utilized my strong communication skills to mentor other team members, write comprehensive documentation, and actively participate in meetings to ensure effective knowledge transfer</li>
+                                                <li>Collaborated with others across the organization to solve problems and build better processes, systems, and software, enhancing the efficiency of cross-functional teams</li>
                                             </ul>
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>Achieved high user satisfaction with the website among church members</li>
-                                                <li>Built the entire website from scratch, showcasing strong coding skills and dedication to the project</li>
-                                                <li>Consistently delivered high-quality code for the website</li>
-                                                <li>Demonstrated proficiency in building and managing a web server on a Raspberry Pi</li>
-                                                <li>Developed effective solutions to improve website functionality and user experience</li>
+                                                <!-- <li>Achieved high user satisfaction with the website among church members</li> -->
+                                                <!-- <li>Built the entire website from scratch, showcasing strong coding skills and dedication to the project</li> -->
+                                                <!-- <li>Consistently delivered high-quality code for the website</li> -->
+                                                <!-- <li>Demonstrated proficiency in building and managing a web server</li> -->
+                                                <!-- <li>Developed effective solutions to improve website functionality and user experience</li> -->
                                                 <li>Maintained a strong understanding of web development trends and best practices</li>
-                                                <li>Optimized the website's performance, ensuring fast load times and a smooth user experience</li>
+                                                <!-- <li>Optimized the website's performance, ensuring fast load times and a smooth user experience</li> -->
+                                                <li>Earned high user satisfaction, reflecting superior user experience design and website functionality</li>
+                                                <li>Consistently delivered clean, robust code, demonstrating a strong grasp of programming principles</li>
+                                                <li>Built and managed a web server from scratch, showcasing my technical proficiency and understanding of cloud-based Linux infrastructure</li>
+                                                <li>Enhanced website performance through optimal coding strategies, ensuring fast load times and a smooth user experience</li>
+                                                <li>Effectively eliminated repetitive tasks through the development of automation scripts, enhancing operational efficiency</li>
+                                                <li>Successfully led multiple projects to completion, contributing to the organization's growth and user satisfaction</li>
                                             </ul>
                                         </td>
                                     </tr>
@@ -511,8 +546,8 @@
                             <div id="table2Exp" class="tab-content">
                                 <table>
                                     <tr>
-                                        <th>Time Active: <span style="font-weight:normal"> 09/2020 - PRESENT</span></th>
-                                        <th>Employment: <span style="font-weight:normal">Part-Time</span></th>
+                                        <th>Time Active: <span style="font-weight:normal"><br class="mobileDisplayShow" />09/2020 - 05/2023</span></th>
+                                        <!--<th>Employment: <span style="font-weight:normal"><br class="mobileDisplayShow" />Part-Time</span></th>-->
                                     </tr>
                                     <tr>
                                         <th>Responsibilities</th>
@@ -546,8 +581,8 @@
                             <div id="table3Exp" class="tab-content">
                                 <table>
                                     <tr>
-                                        <th>Time Active: <span style="font-weight:normal"> 12/2016 - 06/2019</span></th>
-                                        <th>Employment: <span style="font-weight:normal">Part-Time</span></th>
+                                        <th>Time Active: <span style="font-weight:normal"><br class="mobileDisplayShow" />12/2016 - 06/2019</span></th>
+                                        <!--<th>Employment: <span style="font-weight:normal"><br class="mobileDisplayShow" />Part-Time</span></th>-->
                                     </tr>
                                     <tr>
                                         <th>Responsibilities</th>
@@ -583,7 +618,7 @@
                 </table>
             </section>
 
-            <br>
+            <br><span class="spacer"></span>
             <section id="education">
                 <table id="educationTable">
                     <tr class="tableHead">
@@ -615,8 +650,8 @@
                             <div id="table1Edu" class="tab-content active">
                                 <table>
                                     <tr>
-                                        <th>Graduation Date: <span style="font-weight:normal">2021</span></th>
-                                        <th>Degree: <span style="font-weight:normal">B.A., Honours Major</span></th>
+                                        <th>Graduation Date: <span style="font-weight:normal"><br class="mobileDisplayShow" />2021</span></th>
+                                        <th>Degree: <span style="font-weight:normal"><br class="mobileDisplayShow" />B.A., Honours Major</span></th>
                                     </tr>
                                     <tr>
                                         <th>Experience</th>
@@ -665,8 +700,8 @@
                             <div id="table2Edu" class="tab-content">
                                 <table>
                                     <tr>
-                                        <th>Graduation Date: <span style="font-weight:normal">2021</span></th>
-                                        <th>Degree: <span style="font-weight:normal">B.A., Honours Minor</span></th>
+                                        <th>Graduation Date: <span style="font-weight:normal"><br class="mobileDisplayShow" />2021</span></th>
+                                        <th>Degree: <span style="font-weight:normal"><br class="mobileDisplayShow" />B.A., Honours Minor</span></th>
                                     </tr>
                                     <tr>
                                         <th>Experience</th>
@@ -716,25 +751,237 @@
                 </table>
             </section>
 
-            <br>
+            <br><span class="spacer"></span>
             <section id="projects">
-                <table id="projectsTable">
+                <table id="personalProjectsTable">
                     <tr class="tableHead">
                         <td>
-                            <h2>Projects</h2>
+                            <h2>Personal Projects</h2>
+                            <p>A small selection of my previous projects. While these are the only projects/ scripts listed, it is by no means my only experience</p>
                         </td>
                     </tr>
                     <tr>
                         <td class="tab-btn-container">
-                            <button class="tab-btn active" onclick="openTab(event, 'table1Proj', 'projectsTable')">raspi1</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table2Proj', 'projectsTable')">raspi2</button>
-                            <button class="tab-btn" onclick="openTab(event, 'table3Proj', 'projectsTable')">raspi3</button>
+                            <button class="tab-btn active" onclick="openTab(event, 'table1PP', 'personalProjectsTable')">
+                                This Website!<br />
+                                <span style="font-weight: normal;">LAMP Stack, HTML, CSS, JS</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2PP', 'personalProjectsTable')">
+                                St. Mary's<br />
+                                <span style="font-weight: normal;">PHP, MySQL, Cookies, Authentication</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table7PP', 'personalProjectsTable')">
+                                TrueNAS SCALE Server<br />
+                                <span style="font-weight: normal;">System Administrator, Docker</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn" onclick="openTab(event, 'table4PP', 'personalProjectsTable')">
+                                Local Music To JSON<br />
+                                <span style="font-weight: normal;">Python</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table5PP', 'personalProjectsTable')">
+                                Twitter & OpenAI API Showcase<br />
+                                <span style="font-weight: normal;">Python</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table6PP', 'personalProjectsTable')">
+                                Toronto Hacks 2022<br />
+                                <span style="font-weight: normal;">Python</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn" onclick="openTab(event, 'table8PP', 'personalProjectsTable')">
+                                Unity Game Development<br />
+                                <span style="font-weight: normal;">C#</span>
+                            </button>
+<!--                            <button class="tab-btn" onclick="openTab(event, 'table3PP', 'personalProjectsTable')">
+                                Rick Roll Meme<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Raspi -->
+                            <div id="table1PP" class="tab-content active">
+                                <p>
+                                    This website and the server it's hosted on is an amalgamation of everything I've ever learned in regards to IT. <br />
+                                    The start of my full-stack developer journey. It is completely built from scratch and every bit of it is hand coded by me. <br />
+                                    The web server is hosted on a server running Apache. It features SSL encryption, automated certificate renewal, <br />
+                                    dynamic DNS so that there is minimal downtime, as well as Cloudflare CDN and caching services. <br />
+                                    It is also reactive so no matter what display or device you are using, you will have a pleasant experience. <br /><br />
+
+                                    Unfortunately most of the work is done behind the scenes so it is not directly visible to the end user, so I have to try and detail it here. <br />
+                                    Most of the code for the website is also available on my
+                                    <a href="https://github.com/Project-Guardian" target="_blank">GitHub</a> if you are interested. <br />
+                                    However, parts of it are not due to privacy and security reasons (i.e. SQL connection forms, and certain server files). <br /><br />
+
+                                    Other features of my servers are: htaccess configurations, automatic redirects (including
+                                    <a href="https://elwinm.ca/404.html" target="_blank">error 4XX</a>),<br />
+                                    <a href="https://games.elwinm.ca" target="_blank">game servers</a>
+                                    (Minecraft, Terraria, one-off spin ups), other subdomains, reverse proxy services for public network facing devices, <br />
+                                    an OpenVPN connection for remote access, Samba network shares, and virtual hosts for running other servers (
+                                    <a href="https://plex.elwinm.ca" target="_blank">Plex</a>, OctoPrint, and PiHole). <br /><br />
+
+                                    I also host my families public servers utilizing virtual hosts, but those can not be shared due to privacy reasons. <br /><br />
+
+                                    This server was my first foray into the Linux environment and I have amassed a great amount of knowledge in terms of <br />
+                                    but not limited to, design, developement (full-stack and otherwise), system administration/ management (users, CRON, group policy), <br />
+                                    network management (DHCP, CDN, DNS), backup management, and best security practices. <br /><br />
+
+                                    Cloudflare services are also used to hide sensitive data from bots and crawlers, as well as their proxy and firewall services. <br />
+                                    Once again, while a majority of my experiences have been detailed here, it is by no means all of it. <br />
+                                    Several hundred hours of designing, developement, troubleshooting, and general labour have been put into all of this.
+                                </p>
+                            </div>
+                            <!-- St. Marys -->
+                            <div id="table2PP" class="tab-content">
+                                <p>
+                                    <a href="https://elwinm.ca/stmarys" target="_blank">St. Mary's Syriac Orthodox Church</a> <br />
+                                    <a href="https://elwinm.ca/stmarys/admin" target="_blank">St. Mary's Admin</a> <br /><br />
+
+                                    This was created as a volunteer project for my local church to: <br />
+                                    Give back to my community and to expand my own knowledge. Everything was created by me from scratch. <br />
+                                    I actively work on the website to make changes as per the requirements of the members and maintain it as necessary. <br /><br />
+
+                                    This webpage is displayed in a kiosk style environment at the church (also set up and managed by me as needed). <br />
+                                    It features a sleek and responsive page. There are three carasouls, one is for the rotating images, the second <br />
+                                    is for the information display (Birthdays, Wedding Anniversaries, and Sponsors), and the third is for the News section at the bottom. <br /><br />
+
+                                    The images, information display, and news all get their content via a connection to a MySQL database. <br />
+                                    I also created an admin panel so that the administrative members can access it to add or edit the data. <br />
+                                    The sponsors data is updated weekly before the Mass so it is vital that the website retrieves the newest data as soon as possible. <br /><br />
+
+                                    The admin panel features a login using properly encrypted users in a database with hashed and salted values. <br />
+                                    While there was originally a sign-up page created which featured the ability for anyone to create an account, <br />
+                                    it was not necessary as the website is not open to the public. So it was later removed. <br />
+                                    Cookies are used that time out automatically so that the user is not logged in permanently (security reasons). <br />
+                                    It features a simple interface so that anyone of varying ages will have no trouble using it. <br /><br />
+
+                                    One of the major challenges I encountered when building this website was retrieving the accurate dates as the requirements<br />
+                                    of the church was to use dates starting from Sunday to Saturday, where MySQL functions retrieve it as Monday to Sunday. <br />
+                                    I had to create my own functions for this specific need as there were no alternatives (at least at the time). <br /><br />
+
+                                    For the admin panel, I have created a guest user that connects to a mock database that can showcase the abilities of the main one. <br />
+                                    However as is was not meant for production, it is not entirely polished and not fully functional <br />
+                                    (i.e. changes made are not visible anywhere else but the admin panel). It is still able to display what the real one can do. <br />
+                                    While this goes against all proper security practises, I believe in an isolated environment, this will be okay, <br />
+                                    the username and password are both "guest" Please use this account if you are interested in seeing the admin panel.
+                                </p>
+                            </div>
+                            <!-- Rick Roll -->
+                            <div id="table3PP" class="tab-content">
+                                <p>
+                                    <a href="https://elwinm.ca/rr" target="_blank">Rick Roll</a> (Link is not active yet)<br /><br />
+
+                                    This page was purely created as a joke. It features an embedded YouTube video of a timer countdown, <br />
+                                    and a button that lets you stop the JavaScript function that will activate at the end of the video running in the background <br />
+                                    that will automatically redirect the page to Rick Astley's Never Gonna Give You Up <br />
+                                </p>
+                            </div>
+                            <!-- Local Music -->
+                            <div id="table4PP" class="tab-content">
+                                <p>
+                                    <a href="https://github.com/Project-Guardian/Local-Music-To-JSON" target="_blank">GitHub</a><br /><br />
+
+                                    A simple program created for my personal use.<br />
+                                    It was made so that I can convert all my local music files into a JSON format so that I can upload the list<br />
+                                    to a website and have it import all the songs onto a YouTube or Spotify (amongst others) playlist.<br /><br />
+
+                                    It originally started out as a simple python script,<br />
+                                    but I decided to make a GUI so that I can share it with others who are not as versed in Python and programming/ scripting.
+
+                                </p>
+                            </div>
+                            <!-- Twitter OpenAI -->
+                            <div id="table5PP" class="tab-content">
+                                <p>
+                                    <a href="https://github.com/Project-Guardian/Twitter_OpenAI" target="_blank">GitHub</a><br /><br />
+
+                                    Python script that uses the (old) Twitter API to read tweets from an account,<br />
+                                    and then uses the OpenAI (Chat GTP) API to classify the tweets.<br /><br />
+
+                                    In this specific script, it determines if tweets from the specific account contains sales promotions in the forms of “deals”<br /><br />
+
+                                    This was a simple script to showcase my ability to use different API’s.
+                                </p>
+                            </div>
+                            <!-- TOHacks -->
+                            <div id="table6PP" class="tab-content">
+                                <p>
+                                    <a href="https://github.com/Project-Guardian/TOHacks-2022" target="_blank">GitHub</a><br /><br />
+
+                                    This collaboration project was created for Toronto Hacks 2022.<br />
+                                    It is used to calculate CO2 emissions for users based on data provided by the user.<br />
+                                    It can be used to plot the data on a graph so that the user can keep track of it all.<br />
+                                    It can also be used compare with other users.<br /><br />
+
+                                    This project was completed in 24 hours.<br />
+                                    We had to overcome many challenges and it was a first-time experience for many of us.<br />
+                                    A video is included in the repo showcasing what this project is about.
+                                </p>
+                            </div>
+                            <!-- Truenas -->
+                            <div id="table7PP" class="tab-content">
+                                <p>
+                                    This project is a relatively new upgrade to my server setup. It runs on enterprise hardware.<br />
+                                    Some highlights on this project are the use of ACL’s, ZFS, Snapshots, Docker Containers,<br />
+                                    Reverse Proxy with Traefik, VPN Management, DNS Management, and SSL Encryption/ Renewal Policies.<br /><br />
+
+                                    It is an overall  upgrade to my previous server in almost everyway, from capacity to performance and security.<br />
+                                    It also features GUI management and network shares only allowed by LAN and VPN managed clients.<br /><br />
+
+                                    Furthermore, it extends and improves the capabilities of my old server by integrating Dynamic DNS services better<br />
+                                    as well as integrating with Cloudflare and Let’s Encrypt in a more professional manner.<br />
+                                    It also features automation in regard to updating components as required.<br /><br />
+
+                                    This server is used in conjunction with my old ones to improve reliability and service.
+                                </p>
+                            </div>
+                            <!-- Unity -->
+                            <div id="table8PP" class="tab-content">
+                                <p>
+                                    As a passion project, I have begun development on a video game in the Unity engine.<br />
+                                    It is still in early stages and there is no minimum viable product to show,<br />
+                                    but I have gained valuable experience in planning, designing, and programming in regard to video games and it's development.<br /><br />
+
+                                    It is a top-down isometric game with a pixel art style. The game uses C# and it is a cooperative project.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+<!--                <table id="scriptsTable">
+                    <tr class="tableHead">
+                        <td>
+                            <h2>Scripts WIP</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1Scripts', 'scriptsTable')">
+                                File Size Management<br />
+                                <span style="font-weight: normal;">Python</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2Scripts', 'scriptsTable')">
+                                File Size Management<br />
+                                <span style="font-weight: normal;">PowerShell (Legacy)</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3Scripts', 'scriptsTable')">
+                                Hardlink Creator<br />
+                                <span style="font-weight: normal;">PowerShell</span>
+                            </button>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <div id="table1Proj" class="tab-content active">
+                            <div id="table1Scripts" class="tab-content active">
                                 <table>
                                     <tr>
                                         <th>Column 1</th>
@@ -750,7 +997,7 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div id="table2Proj" class="tab-content">
+                            <div id="table2Scripts" class="tab-content">
                                 <table>
                                     <tr>
                                         <th>ta 2</th>
@@ -766,7 +1013,7 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div id="table3Proj" class="tab-content">
+                            <div id="table3Scripts" class="tab-content">
                                 <table>
                                     <tr>
                                         <th>3</th>
@@ -785,22 +1032,176 @@
                         </td>
                     </tr>
                 </table>
+                <table id="scriptsTable2">
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1Scripts2', 'scriptsTable2')">
+                                Sub Directory Renamer<br />
+                                <span style="font-weight: normal;">PowerShell</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2Scripts2', 'scriptsTable2')">
+                                File Sorter<br />
+                                <span style="font-weight: normal;">PowerShell</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3Scripts2', 'scriptsTable2')">
+                                Hardlink Creator<br />
+                                <span style="font-weight: normal;">PowerShell</span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="table1Scripts2" class="tab-content active">
+                                <table>
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table2Scripts2" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>ta 2</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table3Scripts2" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>3</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="schoolProjectsTable">
+                    <tr class="tableHead">
+                        <td>
+                            <h2>School Projects WIP</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-btn-container">
+                            <button class="tab-btn active" onclick="openTab(event, 'table1School', 'schoolProjectsTable')">
+                                Rick Roll<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table2School', 'schoolProjectsTable')">
+                                Rick Roll<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>
+                            <button class="tab-btn" onclick="openTab(event, 'table3School', 'schoolProjectsTable')">
+                                Rick Roll<br />
+                                <span style="font-weight: normal;">Embeds, Redirects</span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="table1School" class="tab-content active">
+                                <table>
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table2School" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>ta 2</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="table3School" class="tab-content">
+                                <table>
+                                    <tr>
+                                        <th>3</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 1, Column 1</td>
+                                        <td>Row 1, Column 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row 2, Column 1</td>
+                                        <td>Row 2, Column 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>-->
             </section>
         </div>
 
-        <br>
+        <br><span class="spacer"></span>
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: contact@elwinm.ca</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/elwinwm">Elwin M</a></p>
-            <p>GitHub: <a href="https://github.com/Project-Guardian">Elwin M</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/elwinwm" target="_blank">Elwin M</a></p>
+            <p>GitHub: <a href="https://github.com/Project-Guardian" target="_blank">Elwin M</a></p>
             <p>Phone: <!--sse-->+1 647-921-6841<!--/sse--></p>
             <p>Location: Ontario, Canada</p>
         </section>
+        <!--        <div id="content">
+                <object data="contact.html"></object>
+            </div>-->
+        <!--#include virtual="contact.shtml" -->
+
     </main>
     <footer>
-        <p>Elwin Moolakkattu 2023</p>
+        <p><!--sse-->Elwin Moolakkattu 2023<!--/sse--></p>
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
 
 </html>

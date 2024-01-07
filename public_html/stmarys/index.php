@@ -9,7 +9,7 @@
     <script>
         //Set timers here in seconds:
         var newsTime = 10;
-        var imageTime = 10;
+        var imageTime = 20;
         var contentTime = 10;
     </script>
 </head>
@@ -103,10 +103,10 @@
                     <?php $holy_mass = get_holy_mass();
                     if (sizeof($holy_mass) == 0) {
                         echo "<script>var sponsorsNoContent = true</script>"; $sponsorsNoContent = true;
-                        echo "<p class='slideshowNoEvent'>There are <br> no sponsors <br> for this week</p>";
+                        echo "<p class='slideshowNoEvent'>There are <br> no special qurbanas <br> for this week</p>";
                     } else {
                         echo "<script>var sponsorsNoContent = false</script>"; $sponsorsNoContent = false;
-                        echo "<h1 class='slideshowEvent'>SPONSORS THIS WEEK:</h1>";
+                        echo "<h1 class='slideshowEvent'>SPECIAL QURBANA:</h1>";
                         foreach ($holy_mass as $Sid => $Sarray) {
                             echo "<p class='slideshowEvent'>" . $Sarray[0] . "</p>";
                         }
@@ -121,7 +121,7 @@
             <div class="innerGrid">
                 <?php $news = get_news();
                 if (sizeof($news) == 0) {
-                    echo "<p id='noNews' class='noNews'> Have a good day!</p>";
+                    echo "<p id='noNews' class='noNews'>Welcome to St. Mary's and may God bless you</p>";
                     echo "<p id='newsMessage' class='newsMessage' style='display:none'></p>"; //for javscript error purposes
                 } 
 
@@ -139,7 +139,7 @@
                     foreach ($news as $Nid => $Narray) {
                         if (($birthdayNoContent == true) && ($weddingsNoContent == true) && ($sponsorsNoContent == true)) {
                             //echo "<span id='newsMessage' class='newsMessage'>" . "There are no notable events this week!" . "</span>";
-                            echo "<p id='newsMessage' class='newsMessage'> There are no notable events this week! Have a good day!</p>";
+                            echo "<p id='newsMessage' class='newsMessage'>Welcome to St. Mary's and may God bless you</p>";
                             
                             //echo ". There are no notable events this week!" . "</span>";
                             //echo "<p id='newsMessage' class='newsMessage'> There are no notable events this week! " . $Narray[0] . "</p>";

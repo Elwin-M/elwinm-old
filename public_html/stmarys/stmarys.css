@@ -181,8 +181,8 @@
     grid-column-end: 2;
     position: absolute;
     height: 100%;
-    width: 100%;
-    object-fit: cover;
+    width: auto;
+    object-fit: contain;
 }
 
 .showing,
